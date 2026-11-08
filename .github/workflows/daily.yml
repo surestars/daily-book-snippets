@@ -2,8 +2,12 @@ name: Daily Book Snippet
 
 on:
   schedule:
-    - cron: '15 23 * * *'  # Runs at 08:00 UTC every day
-  workflow_dispatch:      # Allows you to run it manually for testing
+    - cron: '15 23 * * *'  # 5:15 AM Dhaka time
+  workflow_dispatch:
+
+# We must give the action permission to save the progress.json file
+permissions:
+  contents: write
 
 jobs:
   send-email:
@@ -21,3 +25,12 @@ jobs:
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python send_email.py
+
+      # This step saves the updated progress.json back to your GitHub
+      - name: Commit progress tracker
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add progress.json
+          git commit -m "Update snippet progress" || exit 0
+          git push
