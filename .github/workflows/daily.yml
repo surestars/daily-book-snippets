@@ -1,0 +1,23 @@
+name: Daily Book Snippet
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Runs at 08:00 UTC every day
+  workflow_dispatch:      # Allows you to run it manually for testing
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run email script
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python send_email.py
