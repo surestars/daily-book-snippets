@@ -2,7 +2,7 @@ name: Daily Book Snippet
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs at 08:00 UTC every day
+    - cron: '15 23 * * *'  # Runs at 08:00 UTC every day
   workflow_dispatch:      # Allows you to run it manually for testing
 
 jobs:
