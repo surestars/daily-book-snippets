@@ -1,8 +1,11 @@
 name: Daily Book Snippet
 
 on:
-  schedule:
-    - cron: '15 23 * * *'  # 5:15 AM Dhaka time
+  # We commented out the schedule because cron-job.org now handles the exact 5:15 AM timing.
+  # schedule:
+  #   - cron: '15 23 * * *'
+  
+  # This MUST stay active so cron-job.org is allowed to trigger the workflow via the API
   workflow_dispatch:
 
 # We must give the action permission to save the progress.json file
