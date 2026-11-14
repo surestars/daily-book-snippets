@@ -1,11 +1,19 @@
 {
-  "window_start_index": 1,
+  "window_start_index": 2,
   "books": {
     "books/Personal-Development/48-laws-of-power": {
       "chapter": 0,
-      "snippet": 1
+      "snippet": 2
     },
     "books/Personal-Development/The-Almanck-of-Naval-Ravikant": {
+      "chapter": 0,
+      "snippet": 2
+    },
+    "books/Personal-Development/Princple": {
+      "chapter": 0,
+      "snippet": 1
+    },
+    "books/Personal-Development/Sapiens-A-brief-History-of-Human-Kind": {
       "chapter": 0,
       "snippet": 1
     }
