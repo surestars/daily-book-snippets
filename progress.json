@@ -1,25 +1,25 @@
 {
-  "window_start_index": 0,
+  "window_start_index": 1,
   "books": {
     "books/Personal-Development/48-laws-of-power": {
       "chapter": 0,
-      "snippet": 10
+      "snippet": 11
     },
     "books/Personal-Development/The-Almanck-of-Naval-Ravikant": {
       "chapter": 0,
-      "snippet": 10
+      "snippet": 11
     },
     "books/Personal-Development/Princple": {
       "chapter": 0,
-      "snippet": 9
+      "snippet": 10
     },
     "books/Personal-Development/Sapiens-A-brief-History-of-Human-Kind": {
       "chapter": 0,
-      "snippet": 9
+      "snippet": 10
     },
     "books/Personal-Development/Emotional-Intelligence": {
       "chapter": 0,
-      "snippet": 7
+      "snippet": 8
     }
   }
 }
